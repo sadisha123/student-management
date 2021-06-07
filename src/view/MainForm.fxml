@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@css/MainFormStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane fx:id="pneAppBar" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #6200EE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imgClose" fitHeight="16.0" fitWidth="21.0" layoutX="570.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgMinimize" fitHeight="5.0" fitWidth="16.0" layoutX="538.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblTitle" alignment="CENTER" layoutX="3.0" layoutY="17.0" prefHeight="35.0" prefWidth="517.0" text="Label" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane style="-fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <AnchorPane fx:id="pneAddnewStudent" layoutX="14.0" onKeyPressed="#pneAddnewStudent_OnKeyPressed" onKeyReleased="#pneAddnewStudent_OnKeyReleased" onMouseClicked="#pneAddnewStudent_OnMouseClicked" prefHeight="182.0" prefWidth="526.0" styleClass="menu">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="71.0" layoutX="21.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/Student%20Registration.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="98.0" layoutY="24.0" text="Add New Students">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="98.0" layoutY="61.0" text="Click here to add" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="121.0" layoutY="36.0" text="Student Management System">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXRippler fx:id="rprAddeNewStudent" layoutX="134.0" layoutY="168.0" prefHeight="121.0" prefWidth="347.0" />
+            <Label layoutX="238.0" layoutY="361.0" text="Copyright By Sadisha" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
